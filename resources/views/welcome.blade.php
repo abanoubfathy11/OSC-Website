@@ -107,6 +107,41 @@
                     <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </div>
+                <div class="form-group w-50 ">
+                    <label >Date Committee A</label>
+                    <select class="form-control" name="studentDateA" required>
+                        <option selected="selected" hidden></option>
+                        <option value="24/10">24/10 Saturday</option>
+                        <option value="25/10">25/10 Sunday</option>
+                        <option value="26/10">26/10 Monday</option>
+                        <option value="27/10">27/10 Tuesday</option>
+                        <option value="28/10">28/10 Wednesday</option>
+                        <option value="29/10">29/10 Thursday</option>
+                        {{-- <option value="30/10">30/10</option>
+                        <option value="31/10">31/10</option> --}}
+                    </select>
+                    @error('studentDate')
+                    <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="form-group w-50 ">
+                    <label for="">Time Committee A</label>
+                    <select class="form-control" name="studentTimeA" required>
+                        <option selected="selected" hidden></option>
+                        <option value="9 AM">9 AM</option>
+                        <option value="10 AM">10 AM</option>
+                        <option value="11 AM">11 AM</option>
+                        <option value="12 PM">12 PM</option>
+                        <option value="1 AM">1 PM</option>
+                        <option value="2 AM">2 PM</option>
+                        <option value="3 AM">3 PM</option>
+                        <option value="4 AM">4 PM</option>
+                        <option value="5 AM">5 PM   </option>
+                    </select>
+                    @error('studentTime')
+                    <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
                 <div class="form-group">
                     <label >Committee B</label>
                     <select class="form-control"  name="studentCommitteeB" required>
@@ -127,9 +162,9 @@
                     <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </div>
-                <div class="form-group">
-                    <label >Date</label>
-                    <select class="form-control" name="studentDate" required>
+                <div class="form-group w-50 ">
+                    <label >Date Committee B</label>
+                    <select class="form-control" name="studentDateB" required>
                         <option selected="selected" hidden></option>
                         <option value="24/10">24/10 Saturday</option>
                         <option value="25/10">25/10 Sunday</option>
@@ -144,9 +179,9 @@
                     <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </div>
-                <div class="form-group">
-                    <label for="">Time</label>
-                    <select class="form-control" name="studentTime" required>
+                <div class="form-group w-50 ">
+                    <label for="">Time Committee B</label>
+                    <select class="form-control" name="studentTimeB" required>
                         <option selected="selected" hidden></option>
                         <option value="9 AM">9 AM</option>
                         <option value="10 AM">10 AM</option>

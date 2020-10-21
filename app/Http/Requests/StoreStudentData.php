@@ -31,8 +31,10 @@ class StoreStudentData extends FormRequest
             'studentYear'=>'required|numeric',
             'studentCommitteeA'=>'required|regex:/^[\pL\s\-]+$/u',
             'studentCommitteeB'=>'required|regex:/^[\pL\s\-]+$/u',
-            'studentDate'=>'required',
-            'studentTime'=>'required',
+            'studentDateA'=>'required',
+            'studentTimeA'=>'required',
+            'studentDateB'=>'required',
+            'studentTimeB'=>'required',
         ];
     }
     public function messages()
@@ -54,8 +56,10 @@ class StoreStudentData extends FormRequest
             'studentCommitteeA.regex'=>'*A Committee A must be text',
             'studentCommitteeB.required'=>'*A Committee A is required',
             'studentCommitteeB.regex'=>'*A Committee A must be text',
-            'studentDate.required'=>'*A Date is required',
-            'studentTime.required'=>'*A Time is required'
+            'studentDateA.required'=>'*A Date is required',
+            'studentTimeA.required'=>'*A Time is required',
+            'studentDateB.required'=>'*A Date is required',
+            'studentTimeB.required'=>'*A Time is required'
         ];
     }
 }

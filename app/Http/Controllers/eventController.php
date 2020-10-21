@@ -8,10 +8,8 @@ use Illuminate\Http\Request;
 
 class eventController extends Controller
 {
-
     public function store(StoreStudentData $request)
     {
-
         $member=new Event();
 
         $member->name=$request->studentName;
@@ -21,14 +19,23 @@ class eventController extends Controller
         $member->studentYear=$request->studentYear;
         $member->committee_A=$request->studentCommitteeA;
         $member->committee_B=$request->studentCommitteeB;
-        $member->date=$request->studentDate;
-        $member->time=$request->studentTime;
+        $member->dateCommittee_A=$request->studentDateA;
+        $member->timeCommittee_A=$request->studentTimeA;
+        $member->dateCommittee_B=$request->studentDateB;
+        $member->timeCommittee_B=$request->studentTimeB;
         $status = $member->saveOrFail();
 
-        if($status)
-            return redirect()->route('home')->with(['success'=>'Registration Successfully']);
-        else
-            return redirect()->route('home')->with(['fail'=>'Regestration Fail']);
-
+        if ($status) {
+            return redirect()->route('homePage')->with(['success'=>'Registration Successfully']);
+        } else {
+            return redirect()->route('homePage')->with(['fail'=>'Regestration Fail']);
+        }
+    }
+    public function getAllMembers()
+    {
+        $member=new Event();
+        $collection=$member->get();
+        return \view('Committees.EventMembers')->with('collection',$collection);
     }
 }
+

@@ -9,7 +9,7 @@ class Event extends Model
 {
     protected $table = 'events';
     protected $primaryKey = 'id';
-    protected $fillable = 
+    protected $fillable =
     [
         'name',
         'email',
@@ -18,8 +18,11 @@ class Event extends Model
         'grade',
         'committee_A',
         'committee_B',
-        'date',
-        'time'
+        'dateCommittee_A',
+        'timeCommittee_A',
+        'dateCommittee_B',
+        'timeCommittee_B'
+
     ];
     protected $hidden=['created_at','updated_at'];
 }
