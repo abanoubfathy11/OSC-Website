@@ -89,19 +89,11 @@
                 </div>
                 <div class="form-group">
                     <label >Committee A</label>
-                    <select class="form-control" name="studentCommitteeA" required>
+                    <select class="form-control" name="studentCommitteeA" id="studentCommitteeA" required>
                         <option selected="selected" hidden></option>
-                        <option value="Art">Art</option>
-                        <option value="Linux">Linux</option>
-                        <option value="Web">Web</option>
-                        <option value="Projects">Projects</option>
-                        <option value="HR">HR</option>
-                        <option value="PR">PR</option>
-                        <option value="Game">Game</option>
-                        <option value="Lr">LR</option>
-                        <option value="English">English Heros</option>
-                        <option value="CCC">CCC</option>
-                        <option value="Blender">Blender</option>
+                        @foreach ($committees as $committee)
+                            <option value="{{$committee->name}}">{{$committee->name}}</option>
+                        @endforeach
                     </select>
                     @error('studentCommitteeA')
                     <div class="text-danger">{{ $message }}</div>
@@ -109,16 +101,9 @@
                 </div>
                 <div class="form-group w-50 ">
                     <label >Date Committee A</label>
-                    <select class="form-control" name="studentDateA" required>
-                        <option selected="selected" hidden></option>
-                        <option value="24/10">24/10 Saturday</option>
-                        <option value="25/10">25/10 Sunday</option>
-                        <option value="26/10">26/10 Monday</option>
-                        <option value="27/10">27/10 Tuesday</option>
-                        <option value="28/10">28/10 Wednesday</option>
-                        <option value="29/10">29/10 Thursday</option>
-                        {{-- <option value="30/10">30/10</option>
-                        <option value="31/10">31/10</option> --}}
+                    <select class="form-control" name="studentDateA" id="studentDateA" required>
+
+
                     </select>
                     @error('studentDate')
                     <div class="text-danger">{{ $message }}</div>
@@ -126,17 +111,9 @@
                 </div>
                 <div class="form-group w-50 ">
                     <label for="">Time Committee A</label>
-                    <select class="form-control" name="studentTimeA" required>
-                        <option selected="selected" hidden></option>
-                        <option value="9 AM">9 AM</option>
-                        <option value="10 AM">10 AM</option>
-                        <option value="11 AM">11 AM</option>
-                        <option value="12 PM">12 PM</option>
-                        <option value="1 AM">1 PM</option>
-                        <option value="2 AM">2 PM</option>
-                        <option value="3 AM">3 PM</option>
-                        <option value="4 AM">4 PM</option>
-                        <option value="5 AM">5 PM   </option>
+                    <select class="form-control" name="studentTimeA" id="studentTimeA"  required>
+
+
                     </select>
                     @error('studentTime')
                     <div class="text-danger">{{ $message }}</div>
@@ -144,19 +121,11 @@
                 </div>
                 <div class="form-group">
                     <label >Committee B</label>
-                    <select class="form-control"  name="studentCommitteeB" required>
+                    <select class="form-control"  name="studentCommitteeB" id="studentCommitteeB" required>
                         <option selected="selected" hidden></option>
-                        <option value="Art">Art</option>
-                        <option value="Linux">Linux</option>
-                        <option value="Web">Web</option>
-                        <option value="Projects">Projects</option>
-                        <option value="HR">HR</option>
-                        <option value="PR">PR</option>
-                        <option value="Game">Game</option>
-                        <option value="Lr">LR</option>
-                        <option value="English">English Heros</option>
-                        <option value="CCC">CCC</option>
-                        <option value="Blender">Blender</option>
+                        @foreach ($committees as $committee)
+                            <option value="{{$committee->name}}">{{$committee->name}}</option>
+                        @endforeach
                     </select>
                     @error('studentCommitteeB')
                     <div class="text-danger">{{ $message }}</div>
@@ -164,16 +133,8 @@
                 </div>
                 <div class="form-group w-50 ">
                     <label >Date Committee B</label>
-                    <select class="form-control" name="studentDateB" required>
-                        <option selected="selected" hidden></option>
-                        <option value="24/10">24/10 Saturday</option>
-                        <option value="25/10">25/10 Sunday</option>
-                        <option value="26/10">26/10 Monday</option>
-                        <option value="27/10">27/10 Tuesday</option>
-                        <option value="28/10">28/10 Wednesday</option>
-                        <option value="29/10">29/10 Thursday</option>
-                        {{-- <option value="30/10">30/10</option>
-                        <option value="31/10">31/10</option> --}}
+                    <select class="form-control" name="studentDateB" id="studentDateB" required>
+
                     </select>
                     @error('studentDate')
                     <div class="text-danger">{{ $message }}</div>
@@ -181,17 +142,7 @@
                 </div>
                 <div class="form-group w-50 ">
                     <label for="">Time Committee B</label>
-                    <select class="form-control" name="studentTimeB" required>
-                        <option selected="selected" hidden></option>
-                        <option value="9 AM">9 AM</option>
-                        <option value="10 AM">10 AM</option>
-                        <option value="11 AM">11 AM</option>
-                        <option value="12 PM">12 PM</option>
-                        <option value="1 AM">1 PM</option>
-                        <option value="2 AM">2 PM</option>
-                        <option value="3 AM">3 PM</option>
-                        <option value="4 AM">4 PM</option>
-                        <option value="5 AM">5 PM   </option>
+                    <select class="form-control" name="studentTimeB" id="studentTimeB" required>
                     </select>
                     @error('studentTime')
                     <div class="text-danger">{{ $message }}</div>
@@ -203,5 +154,108 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+        <script src="http://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script>
+
+            $(document).ready(function () {
+
+                document.getElementById("studentCommitteeA").onchange=function()
+                {
+                    var index = this.selectedIndex;
+                    $.ajax({
+                        type: "get",
+                        url: "{{route('appointmentsAjax')}}",
+                        data:{
+                            '_token':"{{csrf_token()}}",
+                            'name':index,
+                        },
+                        success: function (response) {
+
+                            // console.log(response);
+
+                            var cartonaDate='<option selected="selected" hidden></option>';
+                            var cartonaTime=`<option selected="selected" hidden></option>`;
+                            if (response.length>0)
+                            {
+                                response.forEach(element => {
+                                    if(element.numberOfSeats>0)
+                                    {
+                                        cartonaDate+=`<option value="${element.date+'#'+element.id}">${element.date}</option>`;
+                                        cartonaTime+=`<option value="${element.time}">${element.time}</option>`;
+                                    }
+                                });
+                                console.log(cartonaDate);
+                                console.log(cartonaTime);
+
+                                $("#studentDateA").html(cartonaDate) ;
+                                $("#studentTimeA").html(cartonaTime) ;
+                            }
+                            else
+                            {
+                                cartonaDate+=`<option value="waitting">waitting</option>`;
+                                cartonaTime+=`<option value="waitting">waitting</option>`;
+                                $("#studentDateA").html(cartonaDate) ;
+                                $("#studentTimeA").html(cartonaTime) ;
+                            }
+
+                        },
+                        error:function(reject){
+                            console.log(reject);
+                        }
+                    });
+                };
+
+            });
+
+            $(document).ready(function () {
+
+                document.getElementById("studentCommitteeB").onchange=function()
+                {
+                    var index = this.selectedIndex;
+                    $.ajax({
+                        type: "get",
+                        url: "{{route('appointmentsAjax')}}",
+                        data:{
+                            '_token':"{{csrf_token()}}",
+                            'name':index,
+                        },
+                        success: function (response) {
+
+                            // console.log(response);
+
+                            var cartonaDate='<option selected="selected" hidden></option>';
+                            var cartonaTime=`<option selected="selected" hidden></option>`;
+
+                            if (response.length>0)
+                            {
+                                response.forEach(element => {
+                                    if(element.numberOfSeats>0)
+                                    {
+                                        cartonaDate+=`<option value="${element.date+'#'+element.id}">${element.date}</option>`;
+                                        cartonaTime+=`<option value="${element.time}">${element.time}</option>`;
+                                    }
+                                });
+                                console.log(cartonaDate);
+                                console.log(cartonaTime);
+
+                                $("#studentDateB").html(cartonaDate) ;
+                                $("#studentTimeB").html(cartonaTime) ;
+                            }
+                            else
+                            {
+                                cartonaDate+=`<option value="waitting">waitting</option>`;
+                                cartonaTime+=`<option value="waitting">waitting</option>`;
+                                $("#studentDateB").html(cartonaDate) ;
+                                $("#studentTimeB").html(cartonaTime) ;
+                            }
+                        },
+                        error:function(reject){
+                            console.log(reject);
+                        }
+                    });
+                };
+            });
+
+        </script>
     </body>
 </html>

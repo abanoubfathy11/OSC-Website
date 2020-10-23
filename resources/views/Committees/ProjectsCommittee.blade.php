@@ -1,8 +1,9 @@
 @extends('layout.master')
 @section('content')
 <h1>Projects Committee</h1>
-    <form action="" method="POST">
+<form action="{{route('Insert','10')}}" method="POST">
         {{ csrf_field() }}
+
         <div class="row py-2">
             <div class="offset-4 col-4">
                 <label for="">Date</label>
@@ -46,7 +47,16 @@
                       </tr>
                     </thead>
                     <tbody>
+                       @foreach ($appointments as $appointments)
+                            <tr>
+                                <td>{{$appointments->id}}</td>
+                                <td>{{$appointments->date}}</td>
+                                <td>{{$appointments->time}}</td>
+                                <td>{{$appointments->numberOfSeats}}</td>
+                                <td><a href="{{route('Delete',['committee_id'=>'10','id'=>$appointments->id])}}" class="btn btn-danger">Delete</a></td>
 
+                            </tr>
+                       @endforeach
                     </tbody>
                   </table>
             </div>

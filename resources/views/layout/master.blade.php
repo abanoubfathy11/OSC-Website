@@ -19,37 +19,37 @@
             <a class="nav-link" href="{{route('EventMembers')}}">eventMembers <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('ArtCommittee')}}">Art</a>
+              <a class="nav-link" href="{{route('GetAll','1')}}">Art</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('BlenderCommittee')}}">Blender</a>
+              <a class="nav-link" href="{{route('GetAll','2')}}">Blender</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('cccCommittee')}}">CCC</a>
+                <a class="nav-link" href="{{route('GetAll','3')}}">CCC</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('EnglishCommittee')}}">English</a>
+                <a class="nav-link" href="{{route('GetAll','4')}}">English</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('GameCommittee')}}">Game</a>
+                <a class="nav-link" href="{{route('GetAll','5')}}">Game</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('HRCommittee')}}">HR</a>
+                <a class="nav-link" href="{{route('GetAll','6')}}">HR</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('LinuxCommittee')}}">Linux</a>
+                <a class="nav-link" href="{{route('GetAll','7')}}">Linux</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('LRCommittee')}}">LR</a>
+                <a class="nav-link" href="{{route('GetAll','8')}}">LR</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('ProjectsCommittee')}}">PR</a>
+                <a class="nav-link" href="{{route('GetAll','9')}}">PR</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('ProjectsCommittee')}}">Projects</a>
+                <a class="nav-link" href="{{route('GetAll','10')}}">Projects</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('WebCommittee')}}">Web</a>
+                <a class="nav-link" href="{{route('GetAll','11')}}">Web</a>
             </li>
           </ul>
         </div>
